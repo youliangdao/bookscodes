@@ -1,20 +1,16 @@
 #include <stdio.h>
 
 #define DEBUG_MODE 5
-
-int main(int argc, char const *argv[])
+int main(void)
 {
   int x = 0;
 
-
 #ifdef DEBUG_MODE
-  printf("This is DEBUG MODE!\n");
+  printf("This is DEBUG_MODE!\n");
 #endif
-
 #ifndef DEBUG_MODE
-  printf("This is RELEASE MODE!\n");
+  printf("This is not DEBUG_MODE!\n");
 #endif
-
 
 #if (DEBUG_MODE == 1)
   x = 1;
@@ -26,7 +22,7 @@ int main(int argc, char const *argv[])
   x = 9;
 #endif
 
-  printf("%d", x);
+  printf("x = %d\n", x);
   return 0;
 }
 
